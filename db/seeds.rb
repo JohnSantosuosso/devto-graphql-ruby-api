@@ -1,6 +1,3 @@
-Order.destroy_all
-Payment.destroy_all
-
 order1 = Order.create(description: "King of the Hill DVD", total: 100.00)
 order2 = Order.create(description: "Mega Man 3 OST", total: 29.99)
 order3 = Order.create(description: "Punch Out!! NES", total: 0.75)
