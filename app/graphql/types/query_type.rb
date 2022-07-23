@@ -9,13 +9,11 @@ module Types
 
     # TODO: remove me
     field :all_orders,
-      [Types:OrderType],
-      null: false,
-      description: "Get all orders"
+      [Types::OrderType],
+      null: false
     
       def all_orders
         Order.all
       end
-    end
   end
 end
