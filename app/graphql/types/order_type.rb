@@ -13,6 +13,10 @@ module Types
     def payments_count
       object.payments.size
     end
+
+    def successful_payments
+      object.payments.successful
+    end
  
   end
 end
