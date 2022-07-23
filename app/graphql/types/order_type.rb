@@ -7,11 +7,16 @@ module Types
     field :total, Float, null: false
     field :payments, [Types::PaymentType], null: false
     field :payments_count, Integer, null: false
+    field :successful_payments, [Types::PaymentType], null: false
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
     
     def payments_count
       object.payments.size
+    end
+
+    def successful_payments
+      object.payments.successful
     end
  
   end
